@@ -43,6 +43,12 @@ jobs:
           ./gradlew build
           mv .releaserc2.yml .releaserc.yml
 
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: built-jar
+          path: build/libs/*.jar
+
       - name: Release
         uses: cycjimmy/semantic-release-action@v4.1.0
         with:
