@@ -44,7 +44,7 @@ jobs:
           mv .releaserc2.yml .releaserc.yml
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: built-jar
           path: build/libs/*.jar
